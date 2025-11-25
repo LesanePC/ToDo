@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="logo">
+            <img src="logo.svg" alt="Логотип">
+            <span>MyTodoApp</span>
+        </div>
+    </header>
+
+    <div class="todo-container">
+        <button id="toggleTheme">🌙</button>
+
+        <h1>Список дел</h1>
+        <div class="input-wrapper">
+            <input id="taskInput" type="text" placeholder="Добавить новую задачу...">
+            <input id="deadlineInput" type="date">
+            <select id="prioritySelect">
+                <option value="low" selected>Низкий приоритет</option>
+                <option value="medium">Средний приоритет</option>
+                <option value="high">Высокий приоритет</option>
+            </select>
+            <button id="addBtn">Добавить</button>
+        </div>
+        <div class="filter-buttons">
+            <button data-filter="all" class="active">Все</button>
+            <button data-filter="active">Активные</button>
+            <button data-filter="completed">Выполненные</button>
+        </div>
+
+        <div class="todo-content">
+            <ul id="taskList" class="main-task-list"></ul>
+
+            <div class="columns-container">
+                <div class="column" id="today">
+                    <h2>Сегодня</h2>
+                    <ul class="task-list"></ul>
+                </div>
+                <div class="column" id="tomorrow">
+                    <h2>Завтра</h2>
+                    <ul class="task-list"></ul>
+                </div>
+                <div class="column" id="week">
+                    <h2>Неделя</h2>
+                    <ul class="task-list"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
